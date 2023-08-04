@@ -1,0 +1,148 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  --budget-border-color: rgba(128, 128, 128, 100);
+  --budget-background-color: rgba(128, 128, 128, 0.1);
+
+  --emergency-border-color: rgba(255, 0, 0, 100);
+  --emergency-background-color: rgba(255, 0, 0, 0.1);
+
+  --matches-border-color: rgba(255, 165, 0, 100);
+  --matches-background-color: rgba(255, 165, 0, 0.1);
+
+  --debt-border-color: rgba(0, 128, 0, 100);
+  --debt-background-color: rgba(0, 128, 0, 0.1);
+
+  --goals-border-color: rgba(135, 206, 235, 100);
+  --goals-background-color: rgba(135, 206, 235, 0.1);;
+
+  --save-border-color: rgba(0, 0, 255, 100);
+  --save-background-color: rgba(0, 0, 255, 0.1);
+
+  --future-border-color: rgba(148, 0, 211, 100);
+  --future-background-color: rgba(148, 0, 211, 0.1);
+}
+
+@media (min-width: 768px) {
+  #root {
+    padding: 4px;
+  }
+}
+
+.chartArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chartNode {
+  padding: 8px;
+  margin: 12px 2px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.nodeHeader {
+  font-weight: bold;
+  /*border-bottom: 1px solid;*/
+}
+
+.navItem {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  border-bottom: 1px solid;
+  will-change: filter;
+  transition: 300ms;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+/* Nav Colors */
+.navText {
+  color: white;
+}
+.navItem.budgetBorder:hover {
+  color: var(--budget-border-color);
+}
+.navItem.emergencyBorder:hover {
+  color: var(--emergency-border-color);
+}
+.navItem.matchesBorder:hover {
+  color: var(--matches-border-color);
+}
+.navItem.debtBorder:hover {
+  color: var(--debt-border-color);
+}
+.navItem.goalsBorder:hover {
+  color: var(--goals-border-color);
+}
+.navItem.saveBorder:hover {
+  color: var(--save-border-color);
+}
+.navItem.futureBorder:hover {
+  color: var(--future-border-color);
+}
+
+/* Section Colors */
+.budgetBorder {
+  border-color: var(--budget-border-color);
+}
+.budgetBackground {
+  background-color: var(--budget-background-color);
+}
+.emergencyBorder {
+  border-color: var(--emergency-border-color);
+}
+.emergencyBackground {
+  background-color: var(--emergency-background-color);
+}
+.matchesBorder {
+  border-color: var(--matches-border-color);
+}
+.matchesBackground {
+  background-color: var(--matches-background-color);
+}
+.debtBorder {
+  border-color: var(--debt-border-color);
+}
+.debtBackground {
+  background-color: var(--debt-background-color);
+}
+.goalsBorder {
+  border-color: var(--goals-border-color);
+}
+.goalsBackground {
+  background-color: var(--goals-background-color);
+}
+.saveBorder {
+  border-color: var(--save-border-color);
+}
+.saveBackground {
+  background-color: var(--save-background-color);
+}
+.futureBorder {
+  border-color: var(--future-border-color);
+}
+.futureBackground {
+  background-color: var(--future-background-color);
+}
