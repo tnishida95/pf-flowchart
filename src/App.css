@@ -2,11 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* for debugging */
+* {
+  box-sizing: border-box;
+
+  /* this... */
+  /*outline: 1px solid limegreen !important;*/
+  /* ...or this */
+  /*background: rgb(0 100 0 / 0.1) !important;*/
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Noto Sans', serif;
 
   --budget-border-color: rgba(128, 128, 128, 100);
   --budget-background-color: rgba(128, 128, 128, 0.1);
@@ -36,17 +47,38 @@ html {
   }
 }
 
+.whatIsThisDiv {
+  margin: 16px;
+  max-width: 100vw;
+}
+.sectionAssessBudget {
+  /*width: 100%;*/
+}
+
+.budgetOverview {
+  width: 100%;
+  min-height: 4em;
+  position: fixed;
+  bottom: 16px;
+  align-content: center;
+  vertical-align: center;
+  background-color: rgba(255 255 255 / 0.9);
+  border: 1px black solid;
+}
+
 .chartArea {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100vw;
 }
 
 .chartNode {
   padding: 8px;
   margin: 12px 2px;
   width: 100%;
-  max-width: 600px;
+  /*max-width: 600px;*/
   display: flex;
   flex-direction: column;
   border-style: solid;
@@ -55,11 +87,17 @@ html {
 
 .nodeHeader {
   font-weight: bold;
+  font-size: larger;
   /*border-bottom: 1px solid;*/
 }
 
+.nodeText {
+  max-width: 600px;
+  font-size: large;
+}
+
 .navItem {
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +117,7 @@ a {
 }
 /* Nav Colors */
 .navText {
-  color: white;
+  color: black;
 }
 .navItem.budgetBorder:hover {
   color: var(--budget-border-color);
